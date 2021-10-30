@@ -11,3 +11,8 @@ dist/
 logs
 *.log
 npm-debug.log*
+
+# firebase
+.firebase
+.firebaserc
+firebase.json
