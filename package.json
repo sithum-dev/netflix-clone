@@ -13,7 +13,7 @@
     "npm": "7.24.0",
     "watch": "watch 'clear && npm run -s test | tap-nirvana && npm run -s lint' src"
   },
-  "author": "Andres Alcocer",
+  "author": "Sithum Imarsha",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.22.0",
