@@ -13,6 +13,8 @@ module.exports = () => {
   // reduce env variables to an oject
   const envKeys = Object.keys(env).reduce((prev, next) => {
     prev[`process.env.${next}`] = JSON.stringify(env[next])
+
+    console.log(prev)
     return prev
   }, {})
 
@@ -84,6 +86,9 @@ module.exports = () => {
         template: './src/index.html',
         filename: './index.html',
       }),
+      // new CopyWebpackPlugin({
+      // patterns: [[  { from: 'src/static/images', to: 'static/images' }],
+      // }),
       new CopyWebpackPlugin({
         patterns: [
           {
@@ -93,6 +98,8 @@ module.exports = () => {
         ],
       }),
       new MiniCssExtractPlugin({
+        // Options similar to the same options in webpackOptions.output
+        // both options are optional
         filename: 'main.css',
       }),
       new CleanWebpackPlugin(),
