@@ -13,8 +13,6 @@ module.exports = () => {
   // reduce env variables to an oject
   const envKeys = Object.keys(env).reduce((prev, next) => {
     prev[`process.env.${next}`] = JSON.stringify(env[next])
-
-    console.log(prev)
     return prev
   }, {})
 
