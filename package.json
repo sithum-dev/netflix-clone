@@ -9,7 +9,7 @@
     "lint": "eslint --fix . && echo 'Lint complete.'"
   },
   "engines": {
-    "node": "v14.15.4",
+    "node": "v14.17.6",
     "npm": "7.24.0",
     "watch": "watch 'clear && npm run -s test | tap-nirvana && npm run -s lint' src"
   },
