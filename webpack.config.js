@@ -79,7 +79,11 @@ module.exports = () => {
       global: true,
     },
     plugins: [
-      new webpack.DefinePlugin(envKeys),
+      new webpack.DefinePlugin({
+        'process.env.API_KEY': JSON.stringify(
+          process.env.API_KEY || 'development'
+        ),
+      }),
       new HtmlWebPackPlugin({
         template: './src/index.html',
         filename: './index.html',
